@@ -28,8 +28,8 @@ class Qianwen extends Component
     public function ask(\App\Services\Qianwen $qianwen)
     {
         $executed = RateLimiter::attempt(
-            'qianwen:ask'.request()->ip(),
-            $perThreeHour = 20,
+            'qianwen:ask:'.request()->ip(),
+            $perThreeHour = 30,
             function () use ($qianwen) {
                 $this->messages[] = [
                     'role' => 'user',
@@ -40,7 +40,7 @@ class Qianwen extends Component
                         to: 'answer',
                         content: $partial,
                     );
-                }, 'completions_pro');
+                });
                 $this->messages[] = [
                     'role' => 'assistant',
                     'content' => $this->answer,

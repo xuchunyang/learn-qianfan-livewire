@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Qianwen;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome');
+Route::get('/', Qianwen::class);
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])

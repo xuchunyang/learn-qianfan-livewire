@@ -31,4 +31,8 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'qianwen' => [
+        'api_key' => env('QIANWEN_API_KEY'),
+        'secret_key' => env('QIANWEN_SECRET_KEY'),
+    ],
 ];

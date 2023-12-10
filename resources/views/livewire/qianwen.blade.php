@@ -3,7 +3,8 @@
         @if(!count($messages) && !$question)
             <div class="mt-[15vh]">
                 <div class="flex justify-center items-center">
-                    <x-livewire-logo/>
+                    <x-livewire-logo class="hidden dark:block"/>
+                    <x-livewire-logo-light class="dark:hidden"/>
                     <span class="text-2xl mx-4">+</span>
                     <img class="w-[160px]" src="/yiyan-logo.png" alt="文心一言">
                 </div>

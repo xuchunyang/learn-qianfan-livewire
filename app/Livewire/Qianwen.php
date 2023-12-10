@@ -35,7 +35,7 @@ class Qianwen extends Component
                 to: 'answer',
                 content: $partial,
             );
-        });
+        }, 'completions_pro');
         $this->messages[] = [
             'role' => 'assistant',
             'content' => $this->answer,
@@ -44,7 +44,7 @@ class Qianwen extends Component
         $this->answer = '';
     }
 
-    #[Title('Qianwen')]
+    #[Title('livewire:wire + 文心一言')]
     public function render()
     {
         return view('livewire.qianwen');

@@ -56,6 +56,7 @@
                     <textarea id="prompt"
                               wire:model="prompt"
                               autofocus
+                              required
                               rows="1"
                               class="rounded-md flex-1 dark:bg-slate-900 dark:border-slate-700 shadow-md min-h-[42px] max-h-screen"
                               placeholder="开始对话"></textarea>
